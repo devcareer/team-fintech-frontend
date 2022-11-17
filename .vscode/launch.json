@@ -1,0 +1,18 @@
+{
+  "version": "0.1.0",
+  "configurations": [
+    {
+        "name": "Fintech-app: terminal debugging",
+        "type": "node-terminal",
+        "request": "launch",
+        "command": "yarn start"
+      },
+    {
+      "name": "Fintech-app: debug client-side",
+      "type": "pwa-chrome",
+      "command": "yarn start",
+      "request": "launch",
+      "url": "http://localhost:3000"
+    }
+  ]
+}
