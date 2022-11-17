@@ -1,4 +1,5 @@
 # team-fintech-frontend
+
 The Frontend section for the Fintech Product
 
 ## Figma URL: [link](#)
@@ -12,12 +13,12 @@ The Frontend section for the Fintech Product
 
 > #### To run the app on your local computer
 >
-> - yarn install or npm install
-> - yarn start or npm start
+> - yarn install
+> - yarn start
 
 > #### To run a production build
 >
-> - yarn build or npm run build
+> - yarn build
 
 > # Git Branch Naming Conventions
 >
@@ -33,11 +34,16 @@ The Frontend section for the Fintech Product
 > # Git Commit Message Pattern
 
 > ### Commit Categories:
->
-> - _feat_ is for adding a new feature
-> - _fix_ is for fixing a bug
-> - _refactor_ is for changing code for peformance or convenience purpose (e.g. readibility)
-> - _chore_ is for everything else (writing documentation, formatting, adding tests, cleaning useless code etc.)
+
+> - _build:_ Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+> - _ci:_ Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
+> - _docs:_ Documentation only changes
+> - _feat:_ A new feature
+> - _fix:_ A bug fix
+> - _perf:_ A code change that improves performance
+> - _refactor:_ A code change that neither fixes a bug nor adds a feature
+> - _style:_ Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+> - _test:_ Adding missing tests or correcting existing tests
 
 > #### Example: git commit -m 'feat: add new button component; add new button components to templates'
 >
