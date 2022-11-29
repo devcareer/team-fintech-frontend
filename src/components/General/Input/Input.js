@@ -1,11 +1,11 @@
 // THis components accepts some props like the
 // type---the type of input ,name---name of input,
 // labelText---title of the label, placeholder and width if you dont specify a default is used
+import PropTypes from 'prop-types';
 import React from 'react';
-
-const input = ({ type, name, labelText, placeholder, width = 80 }) => {
+const Input = ({ type, name, labelText, placeholder }) => {
   return (
-    <div className="">
+    <div>
       <label htmlFor={name} className="block text-text-2 text-sm  mb-2">
         {labelText}
       </label>
@@ -13,10 +13,15 @@ const input = ({ type, name, labelText, placeholder, width = 80 }) => {
         type={type}
         name={name}
         placeholder={placeholder}
-        className={`w-${width} appearance-none border border-outline rounded-lg  py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder-text-3 placeholder:text-base`}
+        className="w-full appearance-none border border-outline rounded-lg  py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder-text-3 placeholder:text-base"
       />
     </div>
   );
 };
-
-export default input;
+Input.propTypes = {
+  type: PropTypes.string,
+  name: PropTypes.string,
+  labelText: PropTypes.string,
+  placeholder: PropTypes.string
+};
+export default Input;
