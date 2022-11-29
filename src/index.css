@@ -1,21 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 @tailwind base;
 @tailwind components;
-/* mt-14 */
-/* .btn {
-  @apply p-2.5 bg-primary-300 w-full  rounded-lg whitespace-nowrap text-white text-base hover:bg-primary-200
-  lg:bg-primary-25 py-4 px-14 text-lg;
-} */
-/* .btn.btn-sm {
-  @apply p-2.5;
-} */
-/* .btn.btn-lg {
-  @apply ;
-} */
-.btn-lg{
-  @apply bg-secondary-25
-}
-
 @tailwind utilities;
 
 @layer base {

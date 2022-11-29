@@ -6,7 +6,7 @@ import React from 'react';
 const Input = ({ type, name, labelText, placeholder }) => {
   return (
     <div>
-      <label htmlFor={name} className="block text-text-2 text-sm  mb-2">
+      <label htmlFor={name} className="block text-text-2 text-sm  mb-2 font-normal">
         {labelText}
       </label>
       <input
