@@ -1,8 +1,7 @@
-import VerifyNumber from './pages/VerifyNumber';
 function App() {
   return (
     <div>
-      <VerifyNumber />
+      <h1>Welcome to the fintech App</h1>
     </div>
   );
 }
