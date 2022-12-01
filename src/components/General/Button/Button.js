@@ -1,4 +1,4 @@
-// The button component accepts a type prop to use <Button>{title}</Button>
+// The button component accepts a type and onClick prop to use <Button>{title}</Button>
 import PropTypes from 'prop-types';
 import React from 'react';
 const Button = ({ children, type, onClick }) => {

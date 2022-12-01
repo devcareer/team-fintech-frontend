@@ -10,9 +10,13 @@ const CreateNewPassword = () => {
     newPassword: '',
     confirmPassword: ''
   });
-  const handleClick = () => {
-    console.log(resetPassword);
-    settoast(!false);
+  // const { email } = useAuthen(resetPawword);
+  const handleClick = (e) => {
+    e.preventDefault(e);
+    if (resetPassword.email && resetPassword.newPassword == resetPassword.confirmPassword) {
+      console.log(resetPassword);
+      settoast(!false);
+    }
   };
   const handleOnchange = (e) => {
     SetresetPassword({
@@ -35,20 +39,20 @@ const CreateNewPassword = () => {
         <p className="text-base px-5 text-center mb-10 lg:text-lg ">
           Enter the code sent to your email and create your new pasword
         </p>
-        <div className="flex flex-col gap-6 lg:w-[400px] mx-auto lg:gap-14">
+        <form className="flex flex-col gap-6 lg:w-[400px] mx-auto lg:gap-14">
           <Input
             labelText="Email"
             placeholder="janedoe@gmail.com"
             type="email"
             name="email"
-            value={resetPassword.Email}
+            value={resetPassword.email}
             onChange={handleOnchange}
           />
           <InputPassword
             labeltext="New password"
             placeholder="enter new password"
             name="newPassword"
-            value={resetPassword.NewPassword}
+            value={resetPassword.newPassword}
             onChange={handleOnchange}
           />
           <InputPassword
@@ -58,8 +62,13 @@ const CreateNewPassword = () => {
             value={resetPassword.confirmPassword}
             onChange={handleOnchange}
           />
-          <Button onClick={handleClick}>Reset Password</Button>
-        </div>
+          {resetPassword.newPassword !== resetPassword.confirmPassword && (
+            <p className="text-warningstate">Password must match</p>
+          )}
+          <Button type="submit" onClick={handleClick}>
+            Reset Password
+          </Button>
+        </form>
 
         <p className="text-center mt-10 text-primary-300 lg:mt-[60px]">
           <a href="#">Back to login</a>
