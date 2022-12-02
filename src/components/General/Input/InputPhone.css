@@ -1,30 +1,10 @@
-
-/* --PhoneInput-color--focus {
-    display: none;
-} */
-
-.PhoneInputInput:focus-visible {
-    /* flex: 1; */
-    /* min-width: 0; */
-    /* border: none; */
-    outline: none;
-}
-
-.PhoneInputInput {
-    padding-left: 1rem;
-}
-
-.PhoneInputCountry {
+/* .PhoneInputCountry {
     border-right: 1px solid #E8E6E6;
 
-}
+} */
 
 .PhoneInputCountryIcon {
-    margin-right: 14.72px;
+    /* margin-right: 14.72px; */
     
     /* border-right: 1px solid #E8E6E6; */
-}
-
-.PhoneInputCountrySelectArrow {
-    margin-right: 1rem;
 }

@@ -2,6 +2,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.PhoneInputCountry {
+    @apply border-r border-outline;
+};
+.PhoneInputInput {
+    @apply pl-4;
+};
+.PhoneInputCountrySelectArrow {
+    @apply mr-4;
+};
+.PhoneInputCountryIcon {
+    @apply mr-3.5;
+}
+.PhoneInputInput:focus-visible {
+    @apply outline-none;
+};
 
 @layer base {
     @font-face {
