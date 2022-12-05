@@ -11,9 +11,6 @@ const InputPhone = () => {
         defaultCountry="RU"
         value={value}
         onChange={setValue}
-        // PhoneInputCountryFlag-height {
-        //     height: 3;
-        // }
         className="border border-outline py-3 px-4 flex w-96 rounded-lg"
       />
     </div>
