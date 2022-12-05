@@ -43,7 +43,8 @@ module.exports = {
         2: '#FDB22D'
       },
       light: '#F9F7F4',
-      dark: '#171717'
+      dark: '#171717',
+      white: '#ffffff'
     },
     fontFamily: {
       custom: ['DM Sans']
