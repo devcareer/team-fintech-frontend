@@ -7,6 +7,26 @@
 .btn.btn-lg {
   @apply py-4 px-14 text-lg;
 }
+
+.PhoneInputInput:focus-visible {
+  @apply outline-none;
+}
+
+.PhoneInputInput {
+  @apply pl-4;
+}
+
+.PhoneInputCountry {
+  @apply border-r border-solid border-phoneBorder;
+}
+
+.PhoneInputCountryIcon {
+  @apply mr-[14.72px];
+}
+
+.PhoneInputCountrySelectArrow {
+  @apply mr-4;
+}
 @tailwind utilities;
 
 @layer base {
