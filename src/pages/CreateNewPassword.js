@@ -1,29 +1,23 @@
 import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import Button from '../components/General/Button/Button';
 import Input from '../components/General/Input/Input';
 import InputPassword from '../components/General/Input/InputPassword';
 import Toast from '../components/General/Toast/Toast';
 const CreateNewPassword = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm();
+  console.log(errors);
   const [toast, settoast] = useState(false);
-  const [resetPassword, SetresetPassword] = useState({
-    email: '',
-    newPassword: '',
-    confirmPassword: ''
-  });
-  // const { email } = useAuthen(resetPawword);
-  const handleClick = (e) => {
-    e.preventDefault(e);
-    if (resetPassword.email && resetPassword.newPassword == resetPassword.confirmPassword) {
-      console.log(resetPassword);
-      settoast(!false);
-    }
+
+  const handleClick = (data) => {
+    console.log(data);
+    settoast(!false);
   };
-  const handleOnchange = (e) => {
-    SetresetPassword({
-      ...resetPassword,
-      [e.target.name]: e.target.value
-    });
-  };
+
   const closeModal = () => {
     settoast(false);
   };
@@ -45,27 +39,22 @@ const CreateNewPassword = () => {
             placeholder="janedoe@gmail.com"
             type="email"
             name="email"
-            value={resetPassword.email}
-            onChange={handleOnchange}
+            rhf={{ ...register('email', { required: true }) }}
           />
+          {errors.email?.type == 'required' && <p>Email is required</p>}
           <InputPassword
             labeltext="New password"
             placeholder="enter new password"
             name="newPassword"
-            value={resetPassword.newPassword}
-            onChange={handleOnchange}
+            rhf={{ ...register('newPassword', { min: 8, max: 12 }) }}
           />
           <InputPassword
             labeltext="Confirm password"
             placeholder="retype new password"
             name="confirmPassword"
-            value={resetPassword.confirmPassword}
-            onChange={handleOnchange}
+            rhf={{ ...register('confirmPassword') }}
           />
-          {resetPassword.newPassword !== resetPassword.confirmPassword && (
-            <p className="text-warningstate">Password must match</p>
-          )}
-          <Button type="submit" onClick={handleClick}>
+          <Button type="submit" onClick={handleSubmit(handleClick)}>
             Reset Password
           </Button>
         </form>

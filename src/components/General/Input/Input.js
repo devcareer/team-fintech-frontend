@@ -3,7 +3,7 @@
 // labelText---title of the label, placeholder and width if you dont specify a default is used
 import PropTypes from 'prop-types';
 import React from 'react';
-const Input = ({ type, name, labelText, placeholder, value, onChange }) => {
+const Input = ({ type, name, labelText, placeholder, rhf }) => {
   return (
     <div>
       <label htmlFor={name.toString()} className="block text-text-2 text-sm  mb-2 font-normal">
@@ -13,8 +13,7 @@ const Input = ({ type, name, labelText, placeholder, value, onChange }) => {
         type={type}
         name={name}
         placeholder={placeholder}
-        value={value}
-        onChange={onChange}
+        {...rhf}
         className="w-full appearance-none border border-outline rounded-lg  py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder-text-3 placeholder:text-base"
       />
     </div>
@@ -25,7 +24,6 @@ Input.propTypes = {
   name: PropTypes.string,
   labelText: PropTypes.string,
   placeholder: PropTypes.string,
-  value: PropTypes.string,
-  onChange: PropTypes.func
+  rhf: PropTypes.object
 };
 export default Input;
