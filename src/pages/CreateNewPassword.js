@@ -1,21 +1,34 @@
+import { yupResolver } from '@hookform/resolvers/yup';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
 import Button from '../components/General/Button/Button';
 import Input from '../components/General/Input/Input';
 import InputPassword from '../components/General/Input/InputPassword';
 import Toast from '../components/General/Toast/Toast';
 const CreateNewPassword = () => {
+  const schema = yup.object().shape({
+    email: yup.string().email('Please use a correct email').required('email is required'),
+    newPassword: yup
+      .string()
+      .min(8, 'must be at leaset 8 characters')
+      .max(15, 'max value 15')
+      .required('This Field is required'),
+    confirmPassword: yup.string().oneOf([yup.ref('newPassword'), null], 'Password must be the same')
+  });
+  const formOptions = { resolver: yupResolver(schema) };
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors }
-  } = useForm();
-  console.log(errors);
+  } = useForm(formOptions);
   const [toast, settoast] = useState(false);
 
   const handleClick = (data) => {
     console.log(data);
     settoast(!false);
+    reset();
   };
 
   const closeModal = () => {
@@ -33,27 +46,30 @@ const CreateNewPassword = () => {
         <p className="text-base px-5 text-center mb-10 lg:text-lg ">
           Enter the code sent to your email and create your new pasword
         </p>
-        <form className="flex flex-col gap-6 lg:w-[400px] mx-auto lg:gap-14">
+        <form className="flex flex-col gap-6 lg:w-[400px] mx-auto ">
           <Input
             labelText="Email"
             placeholder="janedoe@gmail.com"
             type="email"
             name="email"
-            rhf={{ ...register('email', { required: true }) }}
+            rhf={{ ...register('email') }}
           />
-          {errors.email?.type == 'required' && <p>Email is required</p>}
+          <p className="text-warningstate mt-0 ">{errors.email?.message}</p>
           <InputPassword
             labeltext="New password"
             placeholder="enter new password"
             name="newPassword"
-            rhf={{ ...register('newPassword', { min: 8, max: 12 }) }}
+            rhf={{ ...register('newPassword') }}
           />
+          <p className="text-warningstate mt-0 ">{errors.newPassword?.message}</p>
           <InputPassword
             labeltext="Confirm password"
             placeholder="retype new password"
             name="confirmPassword"
             rhf={{ ...register('confirmPassword') }}
           />
+          <p className="text-warningstate mt-0 ">{errors.confirmPassword?.message}</p>
+
           <Button type="submit" onClick={handleSubmit(handleClick)}>
             Reset Password
           </Button>

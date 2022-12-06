@@ -6,7 +6,7 @@ import Close from '../../../assets/icons/x.svg';
 const Toast = ({ onClick }) => {
   return (
     <div className="">
-      <main className="w-full bg-white shadow px-3 py-4 flex justify-center gap-5 absolute top-12 z-20 lg:w-96 lg:left-1/2 top-6">
+      <main className="w-full bg-white shadow px-3 py-4 flex justify-center gap-5 absolute top-12 z-20 md:w-96 lg:w-96 lg:left-1/2 top-6">
         <div className=" my-auto ">
           <span>
             <img src={Check} alt="close icon" />
