@@ -38,6 +38,7 @@ module.exports = {
       warningstate: '#FE0000',
       inactive: '#91888B',
       outline: '#E8E6E6',
+      phoneBorder: '#E8E6E6',
       warning: {
         1: '#FFA503',
         2: '#FDB22D'

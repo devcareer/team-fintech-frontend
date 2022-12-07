@@ -1,7 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 @tailwind base;
 @tailwind components;
+.btn {
+  @apply p-2.5  bg-primary-300 w-80 mt-14 rounded-lg whitespace-nowrap text-white text-base hover:bg-primary-200;
+}
+.btn.btn-lg {
+  @apply py-4 px-14 text-lg;
+}
+
+.PhoneInputInput:focus-visible {
+  @apply outline-none;
+}
+
+.PhoneInputInput {
+  @apply pl-4;
+}
+
+.PhoneInputCountry {
+  @apply border-r border-solid border-phoneBorder;
+}
+
+.PhoneInputCountryIcon {
+  @apply mr-[14.72px];
+}
+
+.PhoneInputCountrySelectArrow {
+  @apply mr-4;
+}
 @tailwind utilities;
+.PhoneInputCountry {
+    @apply border-r border-outline;
+};
+.PhoneInputInput {
+    @apply pl-4;
+};
+.PhoneInputCountrySelectArrow {
+    @apply mr-4;
+};
+.PhoneInputCountryIcon {
+    @apply mr-3.5;
+}
+.PhoneInputInput:focus-visible {
+    @apply outline-none;
+};
 
 @layer base {
   @font-face {
