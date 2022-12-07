@@ -11,7 +11,7 @@ const CreateNewPassword = () => {
     email: yup.string().email('Please use a correct email').required('email is required'),
     newPassword: yup
       .string()
-      .min(8, 'must be at leaset 8 characters')
+      .min(8, 'must be atleast 8 characters')
       .max(15, 'max value 15')
       .required('This Field is required'),
     confirmPassword: yup.string().oneOf([yup.ref('newPassword'), null], 'Password must be the same')
