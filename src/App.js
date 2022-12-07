@@ -1,11 +1,9 @@
-import InputPhone from './components/General/Input/InputPhone';
+import CreateNewPassword from './pages/CreateNewPassword';
 function App() {
   return (
     <div>
-      <h1>Welcome to the fintech App</h1>
-      <InputPhone />
+      <CreateNewPassword />
     </div>
   );
 }
-
 export default App;
