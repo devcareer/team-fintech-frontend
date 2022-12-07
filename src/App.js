@@ -1,10 +1,11 @@
-import SignUp from './pages/SignUp';
+import PasswordReset from './pages/PasswordReset';
+// import SignUp from './pages/SignUp';
 
 function App() {
   return (
     <div>
       <h1>Welcome to the fintech App</h1>
-      <SignUp />
+      <PasswordReset />
     </div>
   );
 }
