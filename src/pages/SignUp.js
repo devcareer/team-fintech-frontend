@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from '../General/Button/Button';
-import Input from '../General/Input/Input';
-import InputPassword from '../General/Input/InputPassword';
+import Button from '../components/General/Button/Button';
+import Input from '../components/General/Input/Input';
+import InputPassword from '../components/General/Input/InputPassword';
 
 const SignUp = () => {
   return (
@@ -32,7 +32,7 @@ const SignUp = () => {
             />
           </div>
           <InputPassword labeltext="Password" placeholder="enter password" />
-          <p className="mt-0.5 align-auto text-warning-2 text-xs leading-4">
+          <p className="mt-0.5 align-auto text-warningstate text-xs leading-4">
             must be at least 8 characters
           </p>
           <div className="mt-[58px] lg:mt-[60px]">
