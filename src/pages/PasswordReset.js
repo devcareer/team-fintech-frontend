@@ -30,7 +30,13 @@ const PasswordReset = () => {
   };
   return (
     <>
-      {toast && <Toast onClick={closeModal} />}
+      {toast && (
+        <Toast
+          onClick={closeModal}
+          title="Reset was successful!"
+          text="Check your mail - jan****@g***l.com for reset instructions. If not found, try another mail."
+        />
+      )}
       {toast && (
         <div className=" bg-dark z-10 fixed top-0 left-0 w-full h-screen opacity-30 "></div>
       )}

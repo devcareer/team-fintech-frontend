@@ -36,7 +36,13 @@ const CreateNewPassword = () => {
   };
   return (
     <div className="">
-      {toast && <Toast onClick={closeModal} />}
+      {toast && (
+        <Toast
+          onClick={closeModal}
+          title="New password confirmed!"
+          text="Please proceed to login"
+        />
+      )}
       {toast && (
         <div className=" bg-dark z-10 fixed top-0 left-0 w-full h-screen opacity-30 "></div>
       )}
