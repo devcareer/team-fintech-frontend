@@ -3,13 +3,16 @@
 // labelText---title of the label, placeholder and width if you dont specify a default is used
 import PropTypes from 'prop-types';
 import React from 'react';
-const Input = ({ type, name, labelText, placeholder }) => {
+const Input = ({ value, changeHandler, blurHandler, type, name, labelText, placeholder }) => {
   return (
     <div>
       <label htmlFor={name} className="block text-text-2 text-sm  mb-2 font-normal">
         {labelText}
       </label>
       <input
+        value={value}
+        onChange={changeHandler}
+        onBlur={blurHandler}
         type={type}
         name={name}
         placeholder={placeholder}
@@ -19,6 +22,9 @@ const Input = ({ type, name, labelText, placeholder }) => {
   );
 };
 Input.propTypes = {
+  changeHandler: PropTypes.func,
+  blurHandler: PropTypes.func,
+  value: PropTypes.string,
   type: PropTypes.string,
   name: PropTypes.string,
   labelText: PropTypes.string,
