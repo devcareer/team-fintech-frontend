@@ -4,11 +4,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import eye from '../../../assets/icons/eye-icon.svg';
 
-const InputPassword = ({ labeltext, placeholder }) => {
+const InputPassword = ({ value, changeHandler, blurHandler, labeltext, placeholder }) => {
   return (
     <div className="relative">
       <label className="block text-text-2 text-sm  mb-2">{labeltext}</label>
       <input
+        value={value}
+        onChange={changeHandler}
+        onBlur={blurHandler}
         type="password"
         placeholder={placeholder}
         className="w-full  appearance-none border border-outline rounded-lg  py-3 px-4  text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder-text-3 placeholder:text-base lg:w-[400px] "
@@ -20,6 +23,9 @@ const InputPassword = ({ labeltext, placeholder }) => {
   );
 };
 InputPassword.propTypes = {
+  changeHandler: PropTypes.func,
+  blurHandler: PropTypes.func,
+  value: PropTypes.string,
   labeltext: PropTypes.string,
   placeholder: PropTypes.string
 };
