@@ -1,11 +1,31 @@
-import CreateNewPassword from './pages/CreateNewPassword';
-
+import { Route, Routes } from 'react-router-dom';
+import {
+  Account,
+  Beneficiaries,
+  CreateNewPassword,
+  Help,
+  Home,
+  PasswordReset,
+  Settings,
+  SignUp,
+  Transactions
+} from './pages';
 function App() {
   return (
-    <div>
-      <h1>Welcome to the fintech App</h1>
-      <CreateNewPassword />
-    </div>
+    <>
+      <Routes>
+        <Route path="/createnewpassword" element={<CreateNewPassword />} />
+        <Route path="/passwordreset" element={<PasswordReset />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/" element={<Home />}>
+          <Route path="/transactions" element={<Transactions />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/beneficiaries" element={<Beneficiaries />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/help" element={<Help />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 export default App;
