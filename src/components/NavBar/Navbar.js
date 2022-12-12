@@ -7,23 +7,21 @@ import Logout from '../../assets/icons/logout.svg';
 import Beneficiaries from '../../assets/icons/people.svg';
 import Settings from '../../assets/icons/setting-2.svg';
 import Accounts from '../../assets/icons/user.svg';
+import close from '../../assets/icons/x.svg';
 
 const NavBar = ({ onClick, state }) => {
   return (
-    <main>
-      <div
-        className={
-          state
-            ? ` transition absolute right-4 border lg:static duration-500`
-            : `bg-[#ffffff] transition `
-        }>
-        <div className="px-3 pb-20 ">
-          <section className=" text-right mt-8">
-            <button onClick={onClick}>close</button>
+    <main className="">
+      <div className="">
+        <div>
+          <section className=" text-right mt-8 lg:hidden">
+            <button onClick={onClick}>
+              <img src={close} />
+            </button>
           </section>
-          <p className="py-14 text-3xl font-medium">My App</p>
+          <p className="py-14 text-3xl font-medium hidden lg:block">My App</p>
           <ul>
-            <Link to="/" onClick={onClick}>
+            <Link to="/dashboard" onClick={onClick}>
               <li className="flex mb-8 pl-2 py-2 hover:bg-secondary-50 ">
                 <img className="w-7 h-7 mr-5" src={Dashboard} />
                 <p className="text-xl text-text-2">Dashboard</p>
@@ -72,7 +70,7 @@ const NavBar = ({ onClick, state }) => {
       {!state && (
         <div
           onClick={onClick}
-          className=" bg-dark z-1 fixed top-0 right-0 w-1/2  h-screen opacity-30 lg:hidden "></div>
+          className=" bg-dark z-10 fixed top-0 right-0  h-full  opacity-30 md:hidden lg:hidden "></div>
       )}
     </main>
   );

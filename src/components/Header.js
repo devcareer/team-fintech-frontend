@@ -6,7 +6,7 @@ import Avatar from '../assets/images/Avatar.svg';
 
 const Header = ({ onClick }) => {
   return (
-    <div className="border ">
+    <div className="sticky top-0 left-0 w-full z-10 bg-[#FCFFEB]">
       <div className="w-[90%] mx-auto lg:hidden py-8 ">
         <div className="items-center flex justify-between">
           <button onClick={onClick}>

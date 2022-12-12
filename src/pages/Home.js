@@ -9,10 +9,13 @@ const Home = () => {
   };
   return (
     <div className="relative flex border">
-      <div className="absolute   lg:static basis-1/5 ">
+      <div
+        className={`absolute top-0 left-0 w-[70%] bg-white z-40 transition duration-1000 ease-in-out ${
+          show ? `translate-x-0 ` : `-translate-x-full `
+        } lg:translate-x-0 lg:static lg:w-[20%]`}>
         <NavBar state={show} onClick={handleClick} />
       </div>
-      <div className="border w-full">
+      <div className="border relative w-full">
         <Header onClick={handleClick} />
         <Outlet />
       </div>
