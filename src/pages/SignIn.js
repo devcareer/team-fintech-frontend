@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import Button from '../General/Button/Button';
-import Input from '../General/Input/Input';
-import InputPassword from '../General/Input/InputPassword';
-import InputPhone from '../General/Input/InputPhone';
+import { Link } from 'react-router-dom';
+import Button from '../components/General/Button/Button';
+import Input from '../components/General/Input/Input';
+import InputPassword from '../components/General/Input/InputPassword';
+import InputPhone from '../components/General/Input/InputPhone';
 
 const SignIn = () => {
   const [email, setEmail] = useState(true);
@@ -53,7 +54,10 @@ const SignIn = () => {
           <Button type="button">Sign In</Button>
         </div>
         <p className="mt-8 text-center">
-          Don&apos;t have an account?<span className="text-primary-300 ">Create One</span>
+          Don&apos;t have an account?
+          <Link to="/signup" className="text-primary-300 ">
+            Create One
+          </Link>
         </p>
       </form>
     </div>

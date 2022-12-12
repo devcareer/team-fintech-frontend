@@ -4,11 +4,13 @@ import {
   Beneficiaries,
   CreateNewPassword,
   Dashboard,
+  Error,
   Help,
   Home,
   PasswordReset,
   SendMoney,
   Settings,
+  SignIn,
   SignUp,
   Transactions
 } from './pages';
@@ -19,6 +21,7 @@ function App() {
         <Route path="/createnewpassword" element={<CreateNewPassword />} />
         <Route path="/passwordreset" element={<PasswordReset />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/signin" element={<SignIn />} />
         <Route path="/" element={<Home />}>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/transactions" element={<Transactions />} />
@@ -28,6 +31,7 @@ function App() {
           <Route path="/help" element={<Help />} />
           <Route path="/sendmoney" element={<SendMoney />} />
         </Route>
+        <Route path="*" element={<Error />} />
       </Routes>
     </>
   );

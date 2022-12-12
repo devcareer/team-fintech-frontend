@@ -1,6 +1,7 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 import * as yup from 'yup';
 import Button from '../components/General/Button/Button';
 import Input from '../components/General/Input/Input';
@@ -90,7 +91,10 @@ const SignUp = () => {
             </Button>
           </div>
           <p className="text-center mt-10 ">
-            Already have an account? <span className="text-primary-300">Sign In</span>
+            Already have an account?{' '}
+            <Link to="/signin" className="text-primary-300">
+              Sign In
+            </Link>
           </p>
         </div>
       </div>

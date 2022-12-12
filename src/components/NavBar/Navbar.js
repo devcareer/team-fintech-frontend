@@ -58,7 +58,7 @@ const NavBar = ({ onClick, state }) => {
                 <p className="text-xl text-text-2">Help</p>
               </li>
             </Link>
-            <Link to="/signup" onClick={onClick}>
+            <Link to="/signin" onClick={onClick}>
               <li className="flex pl-2 py-2 hover:bg-secondary-50">
                 <img className="w-7 h-7 mr-5" src={Logout} />
                 <p className="text-xl text-warningstate">Logout</p>
