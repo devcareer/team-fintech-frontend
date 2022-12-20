@@ -12,7 +12,7 @@ const Home = () => {
       <div
         className={`absolute top-0 left-0 w-[70%] bg-white z-40 transition duration-1000 ease-in-out ${
           show ? `translate-x-0 ` : `-translate-x-full `
-        } lg:translate-x-0 lg:static lg:w-[20%]`}>
+        } lg:translate-x-0 lg:sticky lg:w-[20%] h-full`}>
         <NavBar state={show} onClick={handleClick} />
       </div>
       <div className="border relative w-full">
