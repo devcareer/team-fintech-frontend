@@ -20,40 +20,40 @@ const NavBar = ({ onClick, state }) => {
             </button>
           </section>
           <p className="py-14 text-3xl font-medium hidden lg:block">My App</p>
-          <ul>
+          <ul className="flex flex-col gap-4">
             <Link to="/dashboard" onClick={onClick}>
-              <li className="flex mb-8 pl-2 py-2 hover:bg-secondary-50 ">
+              <li className="flex pl-2 py-2 hover:bg-secondary-50 ">
                 <img className="w-7 h-7 mr-5" src={Dashboard} />
                 <p className="text-xl text-text-2">Dashboard</p>
               </li>
             </Link>
             <Link to="/transactions" onClick={onClick}>
-              <li className="flex mb-8 pl-2 py-2 hover:bg-secondary-50 ">
+              <li className="flex  pl-2 py-2 hover:bg-secondary-50 ">
                 <img className="w-7 h-7 mr-5" src={Transactions} />
                 <p className="text-xl text-text-2">Transactions</p>
               </li>
             </Link>
             <Link to="/account" onClick={onClick}>
-              <li className="flex mb-8 pl-2 py-2 hover:bg-secondary-50 ">
+              <li className="flex  pl-2 py-2 hover:bg-secondary-50 ">
                 <img className="w-7 h-7 mr-5" src={Accounts} />
                 <p className="text-xl text-text-2">Accounts</p>
               </li>
             </Link>
             <Link to="/beneficiaries " onClick={onClick}>
-              <li className="flex mb-8 pl-2 py-2 hover:bg-secondary-50 ">
+              <li className="flex  pl-2 py-2 hover:bg-secondary-50 ">
                 <img className="w-7 h-7 mr-5" src={Beneficiaries} />
                 <p className="text-xl text-text-2"> Beneficiaries</p>
               </li>
             </Link>
             <Link to="/settings " onClick={onClick}>
-              <li className="flex mb-8 pl-2 py-2 hover:bg-secondary-50 ">
+              <li className="flex  pl-2 py-2 hover:bg-secondary-50 ">
                 <img className="w-7 h-7 mr-5" src={Settings} />
                 <p className="text-xl text-text-2">Settings</p>
               </li>
             </Link>
             <Link to="/help" onClick={onClick}>
               <li className="border-t-2 border-outline pb-14"></li>
-              <li className="flex mb-8 pl-2 py-2 hover:bg-secondary-50 ">
+              <li className="flex  pl-2 py-2 hover:bg-secondary-50 ">
                 <img className="w-7 h-7 mr-5" src={Help} />
                 <p className="text-xl text-text-2">Help</p>
               </li>
