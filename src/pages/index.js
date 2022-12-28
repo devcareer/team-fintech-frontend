@@ -11,6 +11,8 @@ import Settings from './Settings';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 import Transactions from './Transactions';
+import TransactionFail from './TransactionFail';
+import TransactionSuccess from './TransactionSuccess';
 export {
   Error,
   SignIn,
@@ -24,5 +26,7 @@ export {
   Help,
   Settings,
   Transactions,
+  TransactionFail,
+  TransactionSuccess,
   Dashboard
 };
