@@ -11,6 +11,7 @@ import Settings from './Settings';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 import Transactions from './Transactions';
+import LandingPage from './Home/LandingPage';
 export {
   Error,
   SignIn,
@@ -24,5 +25,6 @@ export {
   Help,
   Settings,
   Transactions,
-  Dashboard
+  Dashboard,
+  LandingPage
 };

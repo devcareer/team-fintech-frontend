@@ -12,7 +12,8 @@ import {
   Settings,
   SignIn,
   SignUp,
-  Transactions
+  Transactions,
+  LandingPage
 } from './pages';
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/passwordreset" element={<PasswordReset />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/" element={<Home />}>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/transactions" element={<Transactions />} />
